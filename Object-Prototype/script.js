@@ -18,21 +18,39 @@
 // };
 
 // 2. Function Declaration
-function Player(nama, energi) {
-  let player = {};
-  player.nama = nama;
-  player.energi = energi;
+// function Player(nama, energi) {
+//   let player = {};
+//   player.nama = nama;
+//   player.energi = energi;
 
-  player.makan = function (porsi) {
+//   player.makan = function (porsi) {
+//     this.energi += porsi;
+//     console.log(`Hallo ${this.nama}, Selamat Makan`);
+//   };
+//   player.main = function (jam) {
+//     this.energi -= jam;
+//     console.log(`Hallo ${this.nama}, Selamat Bermain`);
+//   };
+//   return player;
+// }
+
+// let ballsky = Player("Ballsky", 10);
+// let Fahdil = Player("Fahdil", 20);
+
+// 3. Constructor Function
+// Keyword New
+function Player(nama, energi) {
+  this.nama = nama;
+  this.energi = energi;
+
+  this.makan = function (porsi) {
     this.energi += porsi;
     console.log(`Hallo ${this.nama}, Selamat Makan`);
   };
-  player.main = function (jam) {
+  this.main = function (jam) {
     this.energi -= jam;
     console.log(`Hallo ${this.nama}, Selamat Bermain`);
   };
-  return player;
 }
 
-let ballsky = Player("Ballsky", 10);
-let Fahdil = Player("Fahdil", 20);
+let ballsky = new Player("Ballsky", 10);
