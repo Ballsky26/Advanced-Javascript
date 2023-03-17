@@ -1,0 +1,23 @@
+[
+  {
+    "nama": "Ballsky",
+    "nim": "18.240.0015",
+    "email": "ballsky@gmail.com",
+    "jurusan": "Teknik Informatika",
+    "idmahasiswa": 1
+  },
+  {
+    "nama": "Fadil",
+    "nim": "18.240.0077",
+    "email": "fahdil@gmail.com",
+    "jurusan": "Teknik Informatika",
+    "idmahasiswa": 2
+  },
+  {
+    "nama": "Ari",
+    "nim": "18.240.0049",
+    "email": "ari@gmail.com",
+    "jurusan": "Teknik Informatika",
+    "idmahasiswa": 3
+  }
+]
