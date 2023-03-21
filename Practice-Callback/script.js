@@ -1,5 +1,5 @@
 $.ajax({
-  url: "http://www.omdbapi.com/?apikey=efc47ecd&s=fast&furious",
+  url: "http://www.omdbapi.com/?apikey=efc47ecd&s=avengers",
   success: (results) => {
     const movies = results.Search;
     let cards = "";
@@ -10,7 +10,8 @@ $.ajax({
           <div class="card-body">
             <h5 class="card-title">${m.Title}</h5>
             <h6 class="card-subtitle mb-2 text-muted">${m.Year}</h6>
-            <a href="#" class="btn btn-primary">Lihat Selengkapnya</a>
+            <a href="#" class="btn btn-primary" data-toggle="modal"
+            data-target="#movieDetailModal">Lihat Selengkapnya</a>
           </div>
         </div>
       </div>`;
