@@ -11,6 +11,23 @@ searchButton.addEventListener("click", function () {
       movies.forEach((m) => (cards += showCards(m)));
       const movieContainer = document.querySelector(".movie-container");
       movieContainer.innerHTML = cards;
+
+      // Ketika tombol detail di klik
+      const modalDetailButton = document.querySelectorAll(
+        ".modal-detail-button"
+      );
+      modalDetailButton.forEach((btn) => {
+        btn.addEventListener("click", function () {
+          const imdbid = this.dataset.imdbid;
+          fetch("http://www.omdbapi.com/?apikey=efc47ecd&i=" + imdbid)
+            .then((response) => response.json())
+            .then((m) => {
+              const movieDetail = showMovieDetail(m);
+              const modalBody = document.querySelector(".modal-body");
+              modalBody.innerHTML = movieDetail;
+            });
+        });
+      });
     });
 });
 
